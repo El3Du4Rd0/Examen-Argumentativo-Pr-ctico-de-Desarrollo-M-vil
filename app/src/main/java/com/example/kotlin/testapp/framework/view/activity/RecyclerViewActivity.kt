@@ -3,29 +3,37 @@ package com.example.kotlin.testapp.framework.view.activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
+import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin.testapp.R
-import com.example.kotlin.testapp.data.network.model.pelicula
-import com.example.kotlin.testapp.framework.adapter.adapter_peliculas
+import com.example.kotlin.testapp.framework.adapter.AdapterHistorical
+import com.example.kotlin.testapp.framework.viewmodel.HistoricalViewModel
+import com.example.kotlin.testapp.framework.viewmodel.HistoricalViewModelFactory
 
 class RecyclerViewActivity : AppCompatActivity() {
+
+    private val viewModel: HistoricalViewModel by viewModels { HistoricalViewModelFactory() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recycler_view)
 
-        val peliculas = listOf(
-            pelicula("saw 1", "no sé","1000"),
-            pelicula("it", "no sé","2000"),
-            pelicula("actividad paranormal", "no sé","3000"),
-            pelicula("destino final", "no sé","4000"),
-        )
-
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        val adapter = adapter_peliculas(peliculas)
+        val adapter = AdapterHistorical()
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        viewModel.historicalData.observe(this) { data ->
+            if (!data.isNullOrEmpty()) {
+                Log.d("RecyclerViewActivity", "Actualizando adaptador con datos: $data")
+                adapter.updateData(data)
+            } else {
+                Log.w("RecyclerViewActivity", "No hay datos para mostrar.")
+            }
+        }
 
         val searchView: SearchView = findViewById(R.id.searchView)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -38,5 +46,13 @@ class RecyclerViewActivity : AppCompatActivity() {
                 return false
             }
         })
+
+        viewModel.error.observe(this) { error ->
+            if (error != null) {
+                Toast.makeText(this, "Error: $error", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        viewModel.fetchHistoricalData()
     }
 }
