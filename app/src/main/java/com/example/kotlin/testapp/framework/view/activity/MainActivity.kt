@@ -12,10 +12,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
-        // Configurar el botón "Siguiente"
         val button: Button = findViewById(R.id.button)
         button.setOnClickListener {
-            // Navegar a la nueva actividad
             try {
                 val intent = Intent(this, RecyclerViewActivity::class.java)
                 startActivity(intent)
