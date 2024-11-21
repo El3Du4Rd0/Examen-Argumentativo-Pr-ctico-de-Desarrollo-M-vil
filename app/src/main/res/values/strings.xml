@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="tec">Tecnológico de Monterrey</string>
+    <string name="yo">Juan Eduardo Rosas Cerón A01710168</string>
+    <string name="materia">Integración de seguridad informática en redes y sistemas de software (Gpo 501)</string>
+</resources>
