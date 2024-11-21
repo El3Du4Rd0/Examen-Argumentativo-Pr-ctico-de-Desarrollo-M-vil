@@ -1,0 +1,189 @@
+
+Requerimientos Funcionales:
+
+>    Deberás obtener la información a partir de diferentes llamadas al API proporcionada y cargar TODOS
+    los datos de eventos históricos proporcionados por el catálogo.
+
+>    Deberás realizar una vista simple donde despliegues en una lista el análisis de los datos y agregar los filtros 
+    que consideres que sean más útiles para un usuario. No es necesario que realices la vista del detalle, más no 
+    es una limitante si lo requieres para tu solución, mide tu tiempo.
+
+
+Requerimientos No Funcionales:
+
+>    Se pide incorporar la arquitectura MVVM dentro de la aplicación 
+
+>    Se pide incorporar la meta arquitectura Clean Architecture dentro de la aplicación.
+
+>    Todos los detalles de interfaz y datos podrás modelarlos de la manera que desees, igualmente la lista puedes 
+    desplegarla vertical, horizontal o un grid, se lo más creativo posible.
+
+>    Cada 25% de los request regresa error, deberás manejar que la app no falle en caso de recibir un error.
+
+>    Deberás crear un repositorio en GitHub público individual para subir tu solución, agrega un README.md 
+    que incluya tu nombre, matrícula y la plataforma que estás desarrollando, en caso de no incluirlo se te restarán 
+    5 puntos de la calificación final.
+
+
+
+Entrega:
+Al final deberás subir a este apartado la URL de tu repositorio. 
+
+
+
+Examen Argumentativo Práctico Móviles
+
+
+Este criterio depende de una competencia de aprendizaje MVVM
+Se incluye una estructura de arquitectura con MVVM, incluyendo el patrón de Repositorio dentro de la aplicación
+	
+15 pts
+> Existe y es funcional
+	
+0 pts
+No existe o es parcialmente funcional
+	
+15 pts
+
+
+Este criterio depende de una competencia de aprendizaje Clean Architecture
+Se incluye una estructura de arquitectura con Clean Architecture incluyendo la capa de Dominio dentro de la
+aplicación
+	
+15 pts
+> Existe y es funcional
+	
+0 pts
+No existe o es parcialmente funcional
+	
+15 pts
+
+
+Este criterio depende de una competencia de aprendizaje Creatividad
+La solución entregada se puede utilizar para resolver la necesidad de poder ver los datos históricos
+	
+10 pts
+Datos interpretados
+Los datos son presentados de una manera creativa y son interpretados para resolver la necesidad presentada,
+incluyendo un manejo transparente de los errores que devuelve el servidor y uso de paginación
+	
+1 pts
+>Los datos como vienen
+La solución no interpreta los datos de una manera creativa o no propone una solución real a la necesidad presentada
+o no contiene paginación. El manejo de errores interrumpe la experiencia de usuario.
+	
+0 pts
+No existe una solución
+La solución no aporta a la resolución de la necesidad presentada
+	
+10 pts
+
+
+Este criterio depende de una competencia de aprendizaje Obtención de datos finales
+La aplicación obtiene datos resultado y los despliega dentro de la aplicación
+	
+5 pts
+>Existe conexión a Internet
+Se realiza la llamada a Internet de manera correcta
+	
+3 pts
+Sin conexión
+No existe conexión con el API, pero al menos se carga un objeto local JSON para simular la llamada al API
+	
+0 pts
+No existe
+No existe modelación de los datos desde el código fuente
+	
+5 pts
+
+
+Este criterio depende de una competencia de aprendizaje Interfaz de Usuario
+La UI es entendible, sigue al menos las reglas de diseño de iOS o Android y es aceptada por el profesor
+contrario a la plataforma desarrollada.
+Nota: No se hacen validaciones durante el examen
+	
+10 pts
+> Existe y es validada
+	
+0 pts
+No existe o es parcialmente funcional
+	
+10 pts
+
+
+Este criterio depende de una competencia de aprendizaje Repositorio Github
+Se tiene el proyecto montado en un repositorio público de GitHub el cual cuenta con al menos 2 PR:
+
+1. La creación del proyecto
+2. La implementación de la solución
+	
+10 pts
+> Existe y es funcional
+Existe un estándar en el uso de Pull Request y no solo es un nombre con una descripción.
+	
+0 pts
+No existe o es parcialmente funcional
+	
+10 pts
+
+
+Este criterio depende de una competencia de aprendizaje Solución Final
+La solución es una aplicación móvil para Android/iOS que puede liberarse a producción y cuenta con
+todos los requerimientos funcionales solicitados
+	
+35 pts
+> Existe y es funcional
+	
+0 pts
+No existe o es parcialmente funcional
+El código está incompleto pero se puede compilar
+	
+35 pts
+
+
+
+
+
+Plantilla PR:
+
+Doc: -----------------------
+Describe tus cambios
+---------------------
+Problema
+----------------------
+Instrucciones de aseguramiento de calidad, screenshots, grabaciones:
+----------------------
+Qué tipo de PR es este? (marca los que aplican)
+[ ] Característica
+[ ] Arreglo de Bug
+[ ] Optimización
+[ ] Actualización de documentación
+
+Lista antes de solicitar una revisión
+[ ] He realizado una autorevisión de mi código
+[ ] Si es una característica principal, he agregado pruebas exhaustivas.
+[ ] ¿Será esto parte de una actualización del producto? En caso afirmativo, escriba una frase sobre esta actualización.
+
+Pruebas añadidas/actualizadas?
+[ ] Si
+[ ] No, y este es el motivo: solo se cambió el idioma de las variables y funciones
+[ ] Prueba en curso
+[ ] Necesito ayuda para escribir mis pruebas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
